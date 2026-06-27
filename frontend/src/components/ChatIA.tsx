@@ -9,7 +9,7 @@ interface Message {
 export default function ChatIA() {
   const [ouvert, setOuvert] = useState(false)
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: 'Bonjour ! 👋 Je suis Jeanne, votre assistante chez Mariétou. Comment puis-je vous aider ?' }
+    { role: 'assistant', content: 'Bonjour ! 👋 Je suis Maria, votre assistante chez Mariétou. Comment puis-je vous aider ?' }
   ])
   const [input, setInput] = useState('')
   const [chargement, setChargement] = useState(false)
@@ -89,7 +89,7 @@ export default function ChatIA() {
             background: 'linear-gradient(135deg, #1A3A2A, #2D6A4F)',
             display: 'flex', alignItems: 'center', gap: '12px',
           }}>
-            {/* Avatar Jeanne */}
+            {/* Avatar Maria */}
             <div style={{
               width: '42px', height: '42px', borderRadius: '50%',
               background: 'linear-gradient(135deg, #D4AF37, #F0C040)',
@@ -99,7 +99,7 @@ export default function ChatIA() {
             }}>👩🏾</div>
             <div style={{ flex: 1 }}>
               <p style={{ color: 'white', fontWeight: 700, fontSize: '15px', marginBottom: '2px' }}>
-                Jeanne
+                Maria
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <div style={{

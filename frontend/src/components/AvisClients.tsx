@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 const AVIS = [
-  { nom: 'Jeanneta K.', note: 5, commentaire: 'Livraison super rapide ! La robe est magnifique, exactement comme sur la photo. Je recommande vraiment !', produit: 'Robe Wax', date: 'Il y a 2 jours' },
+  { nom: 'Mariata K.', note: 5, commentaire: 'Livraison super rapide ! La robe est magnifique, exactement comme sur la photo. Je recommande vraiment !', produit: 'Robe Wax', date: 'Il y a 2 jours' },
   { nom: 'Fatou B.', note: 5, commentaire: 'Le paiement Orange Money est trop simple. Les produits sont de qualité. Chez Mariétou c\'est ma boutique préférée !', produit: 'Kit Beauté', date: 'Il y a 5 jours' },
-  { nom: 'Ibrahim S.', note: 4, commentaire: 'Très bon service. L\'assistante Jeanne m\'a bien guidé pour choisir ma taille. Chaussures parfaites !', produit: 'Chaussures Nike', date: 'Il y a 1 semaine' },
+  { nom: 'Ibrahim S.', note: 4, commentaire: 'Très bon service. L\'assistante Maria m\'a bien guidé pour choisir ma taille. Chaussures parfaites !', produit: 'Chaussures Nike', date: 'Il y a 1 semaine' },
   { nom: 'Mariam O.', note: 5, commentaire: 'J\'adore ! Commande reçue en moins de 24h à Ouagadougou. Le sac est encore plus beau en vrai !', produit: 'Sac à Main', date: 'Il y a 2 semaines' },
 ]
 
