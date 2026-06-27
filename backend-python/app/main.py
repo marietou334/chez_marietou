@@ -5,6 +5,7 @@ from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from catalogue import router as catalogue_router
 from ia import router as ia_router
+from paiement import router as paiement_router
 import uvicorn
 
 limiter = Limiter(key_func=get_remote_address)
@@ -37,6 +38,7 @@ async def protection_ddos(request: Request, call_next):
 
 app.include_router(catalogue_router)
 app.include_router(ia_router)
+app.include_router(paiement_router)
 
 @app.get("/health")
 @limiter.limit("30/minute")
