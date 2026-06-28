@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Accueil from './pages/Accueil'
 import Boutique from './pages/Boutique'
+import Dashboard from './pages/admin/Dashboard'
 import Particules from './components/Particules'
 import ChatIA from './components/ChatIA'
 import SelecteurTheme from './components/SelecteurTheme'
@@ -16,16 +17,23 @@ function App() {
 
   return (
     <Router>
-      <Particules />
-      <Navbar panier={panier.length} />
       <Routes>
-        <Route path="/" element={<Accueil avisClients={<AvisClients />} />} />
-        <Route path="/boutique" element={<Boutique />} />
+        <Route path="/admin" element={<Dashboard />} />
+        <Route path="/*" element={
+          <>
+            <Particules />
+            <Navbar panier={panier.length} />
+            <Routes>
+              <Route path="/" element={<Accueil avisClients={<AvisClients />} />} />
+              <Route path="/boutique" element={<Boutique />} />
+            </Routes>
+            <ChatIA />
+            <SelecteurTheme />
+            <Notifications />
+            <ModeNuit />
+          </>
+        } />
       </Routes>
-      <ChatIA />
-      <SelecteurTheme />
-      <Notifications />
-      <ModeNuit />
     </Router>
   )
 }
